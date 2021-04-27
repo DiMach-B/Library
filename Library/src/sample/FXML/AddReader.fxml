@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.ControllerAddReader">
+    <columnConstraints>
+        <ColumnConstraints />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints />
+    </rowConstraints>
+    <children>
+        <AnchorPane prefHeight="800.0" prefWidth="1000.0" style="-fx-background-color: #FFF8DC;">
+            <children>
+                <AnchorPane layoutX="27.0" layoutY="-41.0" prefHeight="138.0" prefWidth="1006.0" style="-fx-background-color: #DC143C; -fx-background-radius: 50;" AnchorPane.rightAnchor="-1.0">
+                    <opaqueInsets>
+                        <Insets />
+                    </opaqueInsets>
+                    <children>
+                        <Label layoutX="341.0" layoutY="62.0" text="Библиотека" textFill="CORNSILK">
+                            <font>
+                                <Font name="Arial Italic" size="57.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </AnchorPane>
+                <Label layoutX="378.0" layoutY="144.0" text="Введите данные" textFill="#030300">
+                    <font>
+                        <Font name="Arial Italic" size="31.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="nameReader_field" layoutX="585.0" layoutY="231.0" prefHeight="31.0" prefWidth="190.0" promptText="Имя читателя" />
+                <TextField fx:id="patronymicReader_filed" layoutX="229.0" layoutY="336.0" prefHeight="31.0" prefWidth="190.0" promptText="Отчество читателя" />
+                <TextField fx:id="surnameReader_field" layoutX="229.0" layoutY="231.0" prefHeight="31.0" prefWidth="190.0" promptText="Фамилия читателя" />
+                <Button fx:id="addReader" layoutX="455.0" layoutY="530.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="94.0" style="-fx-background-color: #DC143C;" text="Добавить" textFill="CORNSILK">
+                    <font>
+                        <Font name="System Bold Italic" size="14.0" />
+                    </font>
+                </Button>
+                <Button fx:id="backButton" layoutX="64.0" layoutY="720.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="83.0" style="-fx-background-color: #DC143C;" text="Назад" textFill="CORNSILK">
+                    <font>
+                        <Font name="System Bold Italic" size="14.0" />
+                    </font>
+                </Button>
+            <TextField fx:id="email_field" layoutX="585.0" layoutY="439.0" prefHeight="31.0" prefWidth="190.0" promptText="E-mail" />
+            <TextField fx:id="telephone_field" layoutX="229.0" layoutY="439.0" prefHeight="31.0" prefWidth="190.0" promptText="Номер телефона" />
+            <DatePicker fx:id="dateBirth" layoutX="583.0" layoutY="339.0" prefHeight="26.0" prefWidth="190.0" promptText="Дата рождения" />
+            <Label fx:id="labelInfo" layoutX="429.0" layoutY="513.0" />
+            </children>
+        </AnchorPane>
+    </children>
+</GridPane>

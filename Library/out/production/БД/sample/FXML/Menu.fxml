@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.ControllerMenu">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <AnchorPane prefHeight="800.0" prefWidth="1000.0" style="-fx-background-color: #FFF8DC;">
+         <children>
+            <AnchorPane layoutY="-44.0" prefHeight="138.0" prefWidth="1000.0" style="-fx-background-color: #DC143C; -fx-background-radius: 50;" AnchorPane.rightAnchor="0.0">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <children>
+                  <Label layoutX="335.0" layoutY="60.0" text="Библиотека" textFill="CORNSILK">
+                     <font>
+                        <Font name="Arial Italic" size="57.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="515.0" layoutY="213.0" prefHeight="501.0" prefWidth="414.0" style="-fx-background-color: #32CD32; -fx-background-radius: 20;">
+               <children>
+                  <Button fx:id="availBooksButton" layoutX="71.0" layoutY="25.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="282.0" style="-fx-background-color: #DC143C;" text="Наличие книг" textFill="CORNSILK">
+                     <font>
+                        <Font name="System Bold Italic" size="23.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="extradRetButton" layoutX="71.0" layoutY="100.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="282.0" style="-fx-background-color: #DC143C;" text="Выдача/Возврат" textFill="CORNSILK">
+                     <font>
+                        <Font name="System Bold Italic" size="23.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="addReaderButton" layoutX="71.0" layoutY="174.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="282.0" style="-fx-background-color: #DC143C;" text="Добавить читателя" textFill="CORNSILK">
+                     <font>
+                        <Font name="System Bold Italic" size="23.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="holderSearchButton" layoutX="71.0" layoutY="251.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="282.0" style="-fx-background-color: #DC143C;" text="Поиск держателя" textFill="CORNSILK">
+                     <font>
+                        <Font name="System Bold Italic" size="23.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="searchMaskButton" layoutX="71.0" layoutY="332.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="282.0" style="-fx-background-color: #DC143C;" text="Поиск по маске" textFill="CORNSILK">
+                     <font>
+                        <Font name="System Bold Italic" size="23.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="reportsButton" layoutX="71.0" layoutY="412.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="282.0" style="-fx-background-color: #DC143C;" text="Отчёты" textFill="CORNSILK">
+                     <font>
+                        <Font name="System Bold Italic" size="23.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <ImageView fitHeight="346.0" fitWidth="351.0" layoutX="83.0" layoutY="280.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/books.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</GridPane>

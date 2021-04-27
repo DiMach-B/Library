@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.ControllerExtraditionReturn">
+    <columnConstraints>
+        <ColumnConstraints />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints />
+    </rowConstraints>
+    <children>
+        <AnchorPane prefHeight="800.0" prefWidth="1000.0" style="-fx-background-color: #FFF8DC;">
+            <children>
+                <AnchorPane layoutY="-44.0" prefHeight="138.0" prefWidth="1000.0" style="-fx-background-color: #DC143C; -fx-background-radius: 50;" AnchorPane.rightAnchor="0.0">
+                    <opaqueInsets>
+                        <Insets />
+                    </opaqueInsets>
+                    <children>
+                        <Label layoutX="335.0" layoutY="60.0" text="Библиотека" textFill="CORNSILK">
+                            <font>
+                                <Font name="Arial Italic" size="57.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </AnchorPane>
+                <Label layoutX="377.0" layoutY="137.0" text="Введите данные" textFill="#030300">
+                    <font>
+                        <Font name="Arial Italic" size="31.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="exIdR_field" layoutX="584.0" layoutY="269.0" prefHeight="31.0" prefWidth="190.0" promptText="id читателя" />
+                <TextField fx:id="retIdI_filed" layoutX="228.0" layoutY="456.0" prefHeight="31.0" prefWidth="190.0" promptText="id экземпляра" />
+                <TextField fx:id="retIdR_filed" layoutX="584.0" layoutY="447.0" prefHeight="31.0" prefWidth="190.0" promptText="id читателя" />
+                <TextField fx:id="exIdI_field" layoutX="228.0" layoutY="269.0" prefHeight="31.0" prefWidth="190.0" promptText="id экземпляра" />
+                <Button fx:id="retBooksButton" layoutX="454.0" layoutY="553.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="94.0" style="-fx-background-color: #DC143C;" text="Вернуть" textFill="CORNSILK">
+                    <font>
+                        <Font name="System Bold Italic" size="14.0" />
+                    </font>
+                </Button>
+                <Button fx:id="backButton" layoutX="61.0" layoutY="712.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="83.0" style="-fx-background-color: #DC143C;" text="Назад" textFill="CORNSILK">
+                    <font>
+                        <Font name="System Bold Italic" size="14.0" />
+                    </font>
+                </Button>
+            <Label layoutX="459.0" layoutY="202.0" text="Выдать" textFill="#030300">
+               <font>
+                  <Font name="Arvo" size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="459.0" layoutY="415.0" text="Вернуть" textFill="#030300">
+               <font>
+                  <Font name="Arvo" size="25.0" />
+               </font>
+            </Label>
+            <Button fx:id="exBooksButton" layoutX="454.0" layoutY="341.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="94.0" style="-fx-background-color: #DC143C;" text="Выдать" textFill="CORNSILK">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+            </Button>
+            <Label fx:id="labelInfo2" layoutX="433.0" layoutY="536.0" />
+            <Label fx:id="labelInfo1" layoutX="435.0" layoutY="324.0" />
+            </children>
+        </AnchorPane>
+    </children>
+</GridPane>
