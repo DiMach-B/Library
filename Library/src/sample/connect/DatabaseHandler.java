@@ -71,6 +71,27 @@ public class DatabaseHandler {
         return resSet;
     }
 
+    public ResultSet choiceBooks1(){
+        ResultSet resSet = null;
+        String select = "SELECT I.ID_I, B."  + Const.BOOKS_NAME + ", A."  + Const.AUTHOR_NAME + " as NA, A." + Const.AUTHOR_SURNAME + ", A." + Const.AUTHOR_PATRONYMIC + " FROM "
+                + Const.BOOKS_TABLE + " B "
+                + "INNER JOIN " + Const.AUTHOR_BOOKS_TABLE + " AB ON B." + Const.BOOKS_ID_B + "=AB." + Const.AUTHOR_BOOKS_ID_B
+                + " INNER JOIN " + Const.AUTHOR_TABLE + " A ON A." + Const.AUTHOR_ID_A + "=AB." + Const.AUTHOR_BOOKS_ID_A
+                + " INNER JOIN " + Const.INSTENCES_TABLE + " I ON B." + Const.BOOKS_ID_B + "=I." + Const.INSTENCES_ID_B
+                ;
+
+        System.out.println(select);
+        try{
+            PreparedStatement prSt = getDbConnection().prepareStatement(select);
+            resSet = prSt.executeQuery();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+
+        return resSet;
+    }
 
 
     public ResultSet getResult(){
@@ -231,7 +252,7 @@ public class DatabaseHandler {
 
     public void retBook1(String id_i, String id_r){
         String update = "UPDATE DISTRIBUTION SET DATE_RETURN = sysdate where ID_R = " + id_r +
-                "AND id_i = " + id_i;
+                " AND id_i = " + id_i;
 
         System.out.println(update);
         try {
@@ -296,6 +317,54 @@ public class DatabaseHandler {
         + " and UPPER(a.surname) LIKE UPPER('%" + bookSurname + "%') "
         + " and UPPER(a.patronymic) LIKE UPPER('%" + bookPatronymic + "%')"
                 ;
+
+        System.out.println(select);
+        try{
+            PreparedStatement prSt = getDbConnection().prepareStatement(select);
+            resSet = prSt.executeQuery();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+
+        return resSet;
+    }
+
+    public ResultSet getReaders(){
+        ResultSet resSet = null;
+        String select = "SELECT * FROM READERS";
+
+        System.out.println(select);
+        try{
+            PreparedStatement prSt = getDbConnection().prepareStatement(select);
+            resSet = prSt.executeQuery();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+
+        return resSet;
+    }
+
+    public ResultSet getExRet(){
+        ResultSet resSet = null;
+        String select = "SELECT   R.ID_R" +
+                "       , R.NAME " +
+                "       , R.SURNAME " +
+                "       , R.PATRONYMIC " +
+                "       , R.NUM_TICKET" +
+                "       , I.ID_I as idBook" +
+                "       , B.NAME as bookName" +
+                "       , A.NAME || ' ' || A.SURNAME || ' ' || A.PATRONYMIC AS FIO " +
+                "From READERS R " +
+                "LEFT JOIN DISTRIBUTION D ON D.ID_R = R.ID_R " +
+                "LEFT JOIN INSTENCES I ON D.ID_I = I.ID_I " +
+                "LEFT JOIN BOOKS B ON B.ID_B = I.ID_B " +
+                "LEFT JOIN AUTHOR_BOOKS AB ON B.ID_B = AB.ID_B " +
+                "LEFT JOIN AUTHOR A ON A.ID_A = AB.ID_A " +
+                "WHERE DATE_RETURN IS NULL";
 
         System.out.println(select);
         try{

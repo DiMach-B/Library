@@ -31,7 +31,7 @@
                         </Label>
                     </children>
                 </AnchorPane>
-                <AnchorPane layoutX="292.0" layoutY="204.0" prefHeight="379.0" prefWidth="414.0" style="-fx-background-color: #32CD32; -fx-background-radius: 20;">
+                <AnchorPane layoutX="292.0" layoutY="204.0" prefHeight="426.0" prefWidth="414.0" style="-fx-background-color: #32CD32; -fx-background-radius: 20;">
                     <children>
                         <Button fx:id="resultsButton" layoutX="38.0" layoutY="25.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="344.0" style="-fx-background-color: #DC143C;" text="Промежуточные итоги" textFill="CORNSILK">
                             <font>
@@ -53,6 +53,11 @@
                                 <Font name="System Bold Italic" size="23.0" />
                             </font>
                         </Button>
+                  <Button fx:id="readersButton" layoutX="39.0" layoutY="343.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="347.0" style="-fx-background-color: #DC143C;" text="Список читателей" textFill="CORNSILK">
+                     <font>
+                        <Font name="System Bold Italic" size="23.0" />
+                     </font>
+                  </Button>
                     </children>
                 </AnchorPane>
             <Button fx:id="backButton" layoutX="63.0" layoutY="730.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="83.0" style="-fx-background-color: #DC143C;" text="Назад" textFill="CORNSILK">

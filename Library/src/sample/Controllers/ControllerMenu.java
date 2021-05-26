@@ -46,7 +46,7 @@ public class ControllerMenu {
 
         extradRetButton.setOnAction(event -> {
             extradRetButton.getScene().getWindow().hide();
-            openNewScene("../FXML/ExtraditionReturn.fxml");
+            openNewScene("../FXML/ExtraditionReturn1.fxml");
         });
 
         holderSearchButton.setOnAction(event -> {

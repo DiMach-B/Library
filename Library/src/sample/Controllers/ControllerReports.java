@@ -25,6 +25,9 @@ public class ControllerReports {
     private Button formBooksButton;
 
     @FXML
+    private Button readersButton;
+
+    @FXML
     private Button backButton;
 
     @FXML
@@ -47,6 +50,11 @@ public class ControllerReports {
         resultsButton.setOnAction(event -> {
             resultsButton.getScene().getWindow().hide();
             openNewScene("../FXML/Results.fxml");
+        });
+
+        readersButton.setOnAction(event -> {
+            readersButton.getScene().getWindow().hide();
+            openNewScene("../FXML/Readers.fxml");
         });
 
         backButton.setOnAction(event -> {
